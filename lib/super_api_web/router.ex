@@ -7,5 +7,6 @@ defmodule SuperApiWeb.Router do
 
   scope "/api", SuperApiWeb do
     pipe_through :api
+    resources "/teachers", TeacherController, except: [:new, :edit]
   end
 end
