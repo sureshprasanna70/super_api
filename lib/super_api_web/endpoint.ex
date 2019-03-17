@@ -37,6 +37,8 @@ defmodule SuperApiWeb.Endpoint do
 
   plug SuperApiWeb.Router
 
+  plug CORSPlug
+
   @doc """
   Callback invoked for dynamically configuring the endpoint.
 
