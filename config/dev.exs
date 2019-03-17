@@ -39,8 +39,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :super_api, SuperApi.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: System.get_env("DEVELOPMENT_DATABASE_USERNAME"),
+  password: System.get_env("DEVELOPMENT_DATABASE_PASSWORD"),
   database: "super_api_dev",
   hostname: "localhost",
   pool_size: 10
