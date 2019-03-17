@@ -3,6 +3,7 @@ defmodule SuperApiWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug CORSPlug, [origin: ["*"], headers: ["*"]]
   end
 
   scope "/api", SuperApiWeb do
