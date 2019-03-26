@@ -40,7 +40,8 @@ defmodule SuperApi.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:plug_cowboy, "~> 1.0"},
-      {:cors_plug, "~> 1.1"}
+      {:cors_plug, "~> 1.1"},
+      {:bcrypt_elixir, "~> 1.0"}
     ]
   end
 

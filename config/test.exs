@@ -12,8 +12,10 @@ config :logger, level: :warn
 # Configure your database
 config :super_api, SuperApi.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: System.get_env("TEST_DATABASE_USERNAME"),
+  password: System.get_env("TEST_DATABASE_PASSWORD"),
   database: "super_api_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :bcrypt_elixir, :log_rounds, 4
