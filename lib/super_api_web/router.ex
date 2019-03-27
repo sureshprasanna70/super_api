@@ -10,6 +10,7 @@ defmodule SuperApiWeb.Router do
     pipe_through :api
     resources "/teachers", TeacherController, except: [:new, :edit]
     resources "/users", UserController, except: [:new, :edit]
+    post "/users/sign_in", UserController, :sign_in
     options "/teachers", TeacherController, :nothing
   end
 end
